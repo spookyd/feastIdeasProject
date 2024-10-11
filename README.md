@@ -61,5 +61,32 @@ components feel bloated.
 I used KingFisher for image resource management.
 
 ## Additional Information: 
-Is there anything else we should know? Feel free to share any insights or constraints you encountered.
+
+For this project I used a basic 3 tiered architecture. UI, Core and Data.
+
+There is another Foundation "module" which is in addition to the 3 tiers in the application. This "module" represents 
+code that is not specific to this application and would likely be used across all products.
+
+The rules for these boundaries are as follows
+
+  - Foundation - This layer has the following attributes
+    - This layer provides support and functionality to the rest of the system.
+    - Contains modules that are not domain specific. For example, networking clients and design systems.
+    - This layer is also not specific to any product and belongs to the "platform".
+    - These modules MUST NOT depend on any "lower" layers.
+  - Core - This layer has the following attributes
+    - Contains Entities, communication protocols and any other business logic that would be used by the UI layer.
+    - This layer SHOULD contain most of the business logic that is not UI specific.
+    - This layer SHOULD NOT depend on the Data layer.
+    - This layer SHOULD NOT depend on the UI layer.
+  - UI - This layer has the following attributes
+    - Contains the UI components and screens for the particular feature.
+    - This layer contains View Models which is the business logic for the view itself.
+    - This layer SHOULD depend on the Core layer.
+    - This layer MUST NOT depend on the Data layer.
+  - Data - This layer has the following attributes.
+    - Contains modules for retrieving and storing data. For example, in memory data storage, disk I/O, specific rest clients (i.e. CloudFrontClient).
+    - This layer SHOULD contain mapping from client to Core types.
+    - This layer MUST NOT depend on the UI layer.
+    - This layer CAN depend on the Core layer.
 
