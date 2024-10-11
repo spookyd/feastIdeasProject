@@ -24,7 +24,7 @@ struct RecipeView: View {
                             .frame(minWidth: 100, minHeight: 100)
                     }
                 }
-                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             Text(recipe.name)
                 .font(.title)
                 .bold()
