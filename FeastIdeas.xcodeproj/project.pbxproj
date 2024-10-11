@@ -11,9 +11,11 @@
 		84052CE32CB9666B00EF3B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052CE22CB9666B00EF3B57 /* ContentView.swift */; };
 		84052CE52CB9666C00EF3B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84052CE42CB9666C00EF3B57 /* Assets.xcassets */; };
 		84052CE82CB9666C00EF3B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84052CE72CB9666C00EF3B57 /* Preview Assets.xcassets */; };
-		84052CF22CB9666C00EF3B57 /* FeastIdeasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052CF12CB9666C00EF3B57 /* FeastIdeasTests.swift */; };
 		84052CFC2CB9666C00EF3B57 /* FeastIdeasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052CFB2CB9666C00EF3B57 /* FeastIdeasUITests.swift */; };
 		84052CFE2CB9666C00EF3B57 /* FeastIdeasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052CFD2CB9666C00EF3B57 /* FeastIdeasUITestsLaunchTests.swift */; };
+		84052D0E2CB968A300EF3B57 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D0D2CB968A300EF3B57 /* HTTPClient.swift */; };
+		84052D102CB9691600EF3B57 /* HTTPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D0F2CB9691600EF3B57 /* HTTPNetworkError.swift */; };
+		84052D142CB969C500EF3B57 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D132CB969C500EF3B57 /* HTTPClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +42,13 @@
 		84052CE42CB9666C00EF3B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84052CE72CB9666C00EF3B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84052CED2CB9666C00EF3B57 /* FeastIdeasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastIdeasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84052CF12CB9666C00EF3B57 /* FeastIdeasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastIdeasTests.swift; sourceTree = "<group>"; };
 		84052CF72CB9666C00EF3B57 /* FeastIdeasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastIdeasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84052CFB2CB9666C00EF3B57 /* FeastIdeasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastIdeasUITests.swift; sourceTree = "<group>"; };
 		84052CFD2CB9666C00EF3B57 /* FeastIdeasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastIdeasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84052D0A2CB9669400EF3B57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84052D0D2CB968A300EF3B57 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		84052D0F2CB9691600EF3B57 /* HTTPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkError.swift; sourceTree = "<group>"; };
+		84052D132CB969C500EF3B57 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		84052CDF2CB9666B00EF3B57 /* FeastIdeas */ = {
 			isa = PBXGroup;
 			children = (
+				84052D0B2CB9685100EF3B57 /* Foundation */,
 				84052CE02CB9666B00EF3B57 /* FeastIdeasApp.swift */,
 				84052CE22CB9666B00EF3B57 /* ContentView.swift */,
 				84052CE42CB9666C00EF3B57 /* Assets.xcassets */,
@@ -115,7 +120,7 @@
 		84052CF02CB9666C00EF3B57 /* FeastIdeasTests */ = {
 			isa = PBXGroup;
 			children = (
-				84052CF12CB9666C00EF3B57 /* FeastIdeasTests.swift */,
+				84052D112CB9698D00EF3B57 /* Foundation */,
 			);
 			path = FeastIdeasTests;
 			sourceTree = "<group>";
@@ -127,6 +132,39 @@
 				84052CFD2CB9666C00EF3B57 /* FeastIdeasUITestsLaunchTests.swift */,
 			);
 			path = FeastIdeasUITests;
+			sourceTree = "<group>";
+		};
+		84052D0B2CB9685100EF3B57 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				84052D0C2CB9686800EF3B57 /* HTTPNetworkClient */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		84052D0C2CB9686800EF3B57 /* HTTPNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				84052D0D2CB968A300EF3B57 /* HTTPClient.swift */,
+				84052D0F2CB9691600EF3B57 /* HTTPNetworkError.swift */,
+			);
+			path = HTTPNetworkClient;
+			sourceTree = "<group>";
+		};
+		84052D112CB9698D00EF3B57 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				84052D122CB9699500EF3B57 /* HTTPNetworkClient */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		84052D122CB9699500EF3B57 /* HTTPNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				84052D132CB969C500EF3B57 /* HTTPClientTests.swift */,
+			);
+			path = HTTPNetworkClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84052CE32CB9666B00EF3B57 /* ContentView.swift in Sources */,
+				84052D102CB9691600EF3B57 /* HTTPNetworkError.swift in Sources */,
 				84052CE12CB9666B00EF3B57 /* FeastIdeasApp.swift in Sources */,
+				84052D0E2CB968A300EF3B57 /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84052CF22CB9666C00EF3B57 /* FeastIdeasTests.swift in Sources */,
+				84052D142CB969C500EF3B57 /* HTTPClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,8 +470,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,8 +500,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

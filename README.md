@@ -9,7 +9,11 @@ What specific areas of the project did you prioritize? Why did you choose to foc
 Approximately how long did you spend working on this project? How did you allocate your time?
 
 ## Trade-offs and Decisions: 
-Did you make any significant trade-offs in your approach?
+
+### Compiler Enforced Boundaries
+
+Typically I would have the architecture layers be located within the Swift Packages to enforce architecture boundaries.
+For the sake of time I am skipping this particular step as it does take a little extra to setup.
 
 ## Weakest Part of the Project: 
 What do you think is the weakest part of your project?
