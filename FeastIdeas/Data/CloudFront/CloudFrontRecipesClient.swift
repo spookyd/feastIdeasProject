@@ -15,7 +15,7 @@ public struct CloudFrontRecipesClient: RecipesRepository {
     }
 
     public func fetchAllRecipes() async throws -> [Recipe] {
-        let response: CloudFrontRecipeResponse = try await network.get(path: "/recipes-empty.json")
+        let response: CloudFrontRecipeResponse = try await network.get(path: "/recipes.json")
         return response.recipes.map {
             .init(
                 id: $0.uuid,

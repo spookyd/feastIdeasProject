@@ -27,6 +27,10 @@ struct RecipeListView: View {
                         .padding()
                     }
                 }
+                if viewModel.isErrorDisplayed {
+                    ErrorDialogView(message: viewModel.errorMessage ?? "An unknown error occurred")
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                }
             }
             .overlay {
                 if viewModel.isLoading {
