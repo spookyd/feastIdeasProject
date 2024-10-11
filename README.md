@@ -21,6 +21,20 @@ Having pull to refresh would have been better in my opinion. However, this is on
 undesirable UI. I could have tried to implement something on my own using `GeometryReader` or `ScrollViewReader` but
 this would have required a lot of trial and error. For this exercise I am going with the manual option. 
 
+### Image Handling
+
+There are two challenges with image fetching. Lazy Container performance and resource management.
+
+#### Lazy Container
+
+The AsyncImage does not cache images. Lazy containers recreate and destroy views as they leave and enter a view. This causes unacceptable image fetching performance which results in poor UI and multiple network calls.
+
+#### Introducing 3rd Party Code
+
+For this project I decided to use a 3rd party library, KingFisher, for the image resource management. Given we are not 
+using much of the functionality I would typically opt to avoid the 3rd party but given the tight time limit I accept 
+this dependency.
+
 ## Weakest Part of the Project: 
 What do you think is the weakest part of your project?
 

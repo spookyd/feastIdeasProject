@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RecipeView: View {
     let recipe: Recipe
@@ -14,15 +15,8 @@ struct RecipeView: View {
             Rectangle()
                 .aspectRatio(1, contentMode: .fit)
                 .overlay {
-                    AsyncImage(url: recipe.photoURL) { image in
-                        image
-                            .resizable()
-                            .scaledToFill()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    } placeholder: {
-                        Color.gray
-                            .frame(minWidth: 100, minHeight: 100)
-                    }
+                    KFImage(recipe.photoURL)
+                        .resizable()
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             Text(recipe.name)
