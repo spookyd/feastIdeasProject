@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeListView: View {
     @EnvironmentObject private var viewModel: RecipeListViewModel
+    @State private var isShowingActionSheet = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -37,7 +38,7 @@ struct RecipeListView: View {
                 await viewModel.fetchRecipes()
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
                         Task {
                             await viewModel.fetchRecipes()
@@ -45,6 +46,26 @@ struct RecipeListView: View {
                     }, label: {
                         Image(systemName: "arrow.circlepath")
                     })
+                }
+                if !viewModel.filters.isEmpty {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            isShowingActionSheet = true
+                        }, label: {
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                        })
+                    }
+                }
+            }
+            .confirmationDialog("Filter", isPresented: $isShowingActionSheet) {
+                VStack {
+                    ForEach(viewModel.filters, id: \.self) { filter in
+                        Button(action: {
+                            viewModel.filterRecipes(by: filter)
+                        }, label: {
+                            Text(filter)
+                        })
+                    }
                 }
             }
         }

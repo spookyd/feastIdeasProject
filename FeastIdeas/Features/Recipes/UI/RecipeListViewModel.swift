@@ -14,8 +14,12 @@ class RecipeListViewModel: ObservableObject {
 
     @Published
     private(set) var isLoading: Bool = false
+    private var fetchedRecipes: [Recipe] = []
     @Published
     private(set) var recipes: [Recipe] = []
+    private let allFilter: String = "All"
+    @Published
+    private(set) var filters: [String] = []
 
     init(repository: RecipesRepository) {
         self.repository = repository
@@ -24,12 +28,25 @@ class RecipeListViewModel: ObservableObject {
     func fetchRecipes() async {
         do {
             isLoading = true
-            recipes = try await repository.fetchAllRecipes()
+            fetchedRecipes = try await repository.fetchAllRecipes()
+            recipes = fetchedRecipes
+            let filters = Set(recipes.map({ $0.cuisine }))
+            if !filters.isEmpty {
+                self.filters = [allFilter] + filters
+            }
             isLoading = false
         } catch {
             print("Failed to fetch \(error)")
             // TODO: Display error message
             isLoading = false
+        }
+    }
+
+    func filterRecipes(by cuisine: String) {
+        if cuisine == allFilter {
+            recipes = fetchedRecipes
+        } else {
+            recipes = fetchedRecipes.filter({ $0.cuisine == cuisine })
         }
     }
 }
