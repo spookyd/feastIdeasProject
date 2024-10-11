@@ -67,12 +67,12 @@ final class CloudFrontRecipesClientTests: XCTestCase {
             "Expected to use large image for photo"
         )
         XCTAssertEqual(
-            recipe?.source.absoluteString,
+            recipe?.source?.absoluteString,
             "https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ",
             "Expected source_url to map to source"
         )
         XCTAssertEqual(
-            recipe?.videoLink.absoluteString,
+            recipe?.videoLink?.absoluteString,
             "https://www.youtube.com/watch?v=6R8ffRRJcrg",
             "Expected youtube_url to map to videoLink"
         )

@@ -15,6 +15,12 @@ Approximately how long did you spend working on this project? How did you alloca
 Typically I would have the architecture layers be located within the Swift Packages to enforce architecture boundaries.
 For the sake of time I am skipping this particular step as it does take a little extra to setup.
 
+### Better Refresh Mechanism
+
+Having pull to refresh would have been better in my opinion. However, this is only available for `List` which forces 
+undesirable UI. I could have tried to implement something on my own using `GeometryReader` or `ScrollViewReader` but
+this would have required a lot of trial and error. For this exercise I am going with the manual option. 
+
 ## Weakest Part of the Project: 
 What do you think is the weakest part of your project?
 

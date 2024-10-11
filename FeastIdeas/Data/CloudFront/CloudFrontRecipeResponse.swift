@@ -12,13 +12,14 @@ struct CloudFrontRecipeResponse: Codable {
 }
 
 struct CloudFrontRecipe: Codable {
+    let uuid: String
     let cuisine: String
     let name: String
     let photoURLLarge: URL
     let photoURLSmall: URL
-    let sourceURL: URL
-    let uuid: String
-    let youtubeURL: URL
+    // Assuming these two are optional since the "good" response does not have this for all entries.
+    let sourceURL: URL?
+    let youtubeURL: URL?
 
     enum CodingKeys: String, CodingKey {
         case cuisine

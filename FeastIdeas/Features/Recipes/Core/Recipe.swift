@@ -12,10 +12,10 @@ public struct Recipe: Identifiable {
     public let name: String
     public let cuisine: String
     public let photoURL: URL
-    public let source: URL
-    public let videoLink: URL
+    public let source: URL?
+    public let videoLink: URL?
 
-    public init(id: String, name: String, cuisine: String, photoURL: URL, source: URL, videoLink: URL) {
+    public init(id: String, name: String, cuisine: String, photoURL: URL, source: URL?, videoLink: URL?) {
         self.id = id
         self.name = name
         self.cuisine = cuisine

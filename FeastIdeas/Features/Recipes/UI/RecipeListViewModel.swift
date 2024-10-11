@@ -22,12 +22,14 @@ class RecipeListViewModel: ObservableObject {
     }
 
     func fetchRecipes() async {
-        defer { isLoading = false }
         do {
             isLoading = true
             recipes = try await repository.fetchAllRecipes()
+            isLoading = false
         } catch {
+            print("Failed to fetch \(error)")
             // TODO: Display error message
+            isLoading = false
         }
     }
 }
