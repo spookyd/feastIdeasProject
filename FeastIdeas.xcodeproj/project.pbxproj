@@ -18,6 +18,10 @@
 		84052D142CB969C500EF3B57 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D132CB969C500EF3B57 /* HTTPClientTests.swift */; };
 		84052D1D2CB979C700EF3B57 /* RecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D1C2CB979C700EF3B57 /* RecipesRepository.swift */; };
 		84052D1F2CB97A0500EF3B57 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D1E2CB97A0500EF3B57 /* Recipe.swift */; };
+		84052D212CB97B1A00EF3B57 /* CloudFrontRecipesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D202CB97B1A00EF3B57 /* CloudFrontRecipesClient.swift */; };
+		84052D232CB97B9800EF3B57 /* CloudFrontRecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D222CB97B9800EF3B57 /* CloudFrontRecipeResponse.swift */; };
+		84052D272CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D262CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift */; };
+		84052D2A2CB97F1F00EF3B57 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D292CB97F1F00EF3B57 /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		84052D132CB969C500EF3B57 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		84052D1C2CB979C700EF3B57 /* RecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesRepository.swift; sourceTree = "<group>"; };
 		84052D1E2CB97A0500EF3B57 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		84052D202CB97B1A00EF3B57 /* CloudFrontRecipesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFrontRecipesClient.swift; sourceTree = "<group>"; };
+		84052D222CB97B9800EF3B57 /* CloudFrontRecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFrontRecipeResponse.swift; sourceTree = "<group>"; };
+		84052D262CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFrontRecipesClientTests.swift; sourceTree = "<group>"; };
+		84052D292CB97F1F00EF3B57 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +134,9 @@
 		84052CF02CB9666C00EF3B57 /* FeastIdeasTests */ = {
 			isa = PBXGroup;
 			children = (
+				84052D282CB97F0800EF3B57 /* TestHarness */,
 				84052D112CB9698D00EF3B57 /* Foundation */,
+				84052D242CB97DC400EF3B57 /* Data */,
 			);
 			path = FeastIdeasTests;
 			sourceTree = "<group>";
@@ -192,16 +202,18 @@
 		84052D172CB978B800EF3B57 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				84052D182CB978C100EF3B57 /* CloudfrontClient */,
+				84052D182CB978C100EF3B57 /* CloudFront */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		84052D182CB978C100EF3B57 /* CloudfrontClient */ = {
+		84052D182CB978C100EF3B57 /* CloudFront */ = {
 			isa = PBXGroup;
 			children = (
+				84052D202CB97B1A00EF3B57 /* CloudFrontRecipesClient.swift */,
+				84052D222CB97B9800EF3B57 /* CloudFrontRecipeResponse.swift */,
 			);
-			path = CloudfrontClient;
+			path = CloudFront;
 			sourceTree = "<group>";
 		};
 		84052D1B2CB9797C00EF3B57 /* Core */ = {
@@ -211,6 +223,30 @@
 				84052D1E2CB97A0500EF3B57 /* Recipe.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		84052D242CB97DC400EF3B57 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84052D252CB97DCC00EF3B57 /* CloudFront */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84052D252CB97DCC00EF3B57 /* CloudFront */ = {
+			isa = PBXGroup;
+			children = (
+				84052D262CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift */,
+			);
+			path = CloudFront;
+			sourceTree = "<group>";
+		};
+		84052D282CB97F0800EF3B57 /* TestHarness */ = {
+			isa = PBXGroup;
+			children = (
+				84052D292CB97F1F00EF3B57 /* MockURLProtocol.swift */,
+			);
+			path = TestHarness;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84052CE32CB9666B00EF3B57 /* ContentView.swift in Sources */,
+				84052D232CB97B9800EF3B57 /* CloudFrontRecipeResponse.swift in Sources */,
 				84052D102CB9691600EF3B57 /* HTTPNetworkError.swift in Sources */,
+				84052D212CB97B1A00EF3B57 /* CloudFrontRecipesClient.swift in Sources */,
 				84052D1D2CB979C700EF3B57 /* RecipesRepository.swift in Sources */,
 				84052D1F2CB97A0500EF3B57 /* Recipe.swift in Sources */,
 				84052CE12CB9666B00EF3B57 /* FeastIdeasApp.swift in Sources */,
@@ -356,6 +394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84052D2A2CB97F1F00EF3B57 /* MockURLProtocol.swift in Sources */,
+				84052D272CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift in Sources */,
 				84052D142CB969C500EF3B57 /* HTTPClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
