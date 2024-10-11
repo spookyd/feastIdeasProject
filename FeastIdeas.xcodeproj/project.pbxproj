@@ -44,6 +44,7 @@
 		84052CF72CB9666C00EF3B57 /* FeastIdeasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastIdeasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84052CFB2CB9666C00EF3B57 /* FeastIdeasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastIdeasUITests.swift; sourceTree = "<group>"; };
 		84052CFD2CB9666C00EF3B57 /* FeastIdeasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastIdeasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84052D0A2CB9669400EF3B57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		84052CD42CB9666B00EF3B57 = {
 			isa = PBXGroup;
 			children = (
+				84052D0A2CB9669400EF3B57 /* README.md */,
 				84052CDF2CB9666B00EF3B57 /* FeastIdeas */,
 				84052CF02CB9666C00EF3B57 /* FeastIdeasTests */,
 				84052CFA2CB9666C00EF3B57 /* FeastIdeasUITests */,
