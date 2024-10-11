@@ -29,6 +29,7 @@
 		84052D392CB987A600EF3B57 /* PreviewStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D382CB987A600EF3B57 /* PreviewStubs.swift */; };
 		84052D3B2CB987C300EF3B57 /* StubbedRecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D3A2CB987C300EF3B57 /* StubbedRecipeRepository.swift */; };
 		84052D3E2CB9903D00EF3B57 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84052D3D2CB9903D00EF3B57 /* Kingfisher */; };
+		84052D402CB99C0400EF3B57 /* NoRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D3F2CB99C0400EF3B57 /* NoRecipesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		84052D362CB9867200EF3B57 /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
 		84052D382CB987A600EF3B57 /* PreviewStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStubs.swift; sourceTree = "<group>"; };
 		84052D3A2CB987C300EF3B57 /* StubbedRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedRecipeRepository.swift; sourceTree = "<group>"; };
+		84052D3F2CB99C0400EF3B57 /* NoRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecipesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			children = (
 				84052D362CB9867200EF3B57 /* RecipeListViewModel.swift */,
 				84052D342CB985DA00EF3B57 /* RecipeListView.swift */,
+				84052D3F2CB99C0400EF3B57 /* NoRecipesView.swift */,
 				84052D2C2CB9807800EF3B57 /* RecipeView.swift */,
 			);
 			path = UI;
@@ -439,6 +442,7 @@
 				84052D312CB981BE00EF3B57 /* BadgeView.swift in Sources */,
 				84052D2D2CB9807800EF3B57 /* RecipeView.swift in Sources */,
 				84052CE12CB9666B00EF3B57 /* FeastIdeasApp.swift in Sources */,
+				84052D402CB99C0400EF3B57 /* NoRecipesView.swift in Sources */,
 				84052D372CB9867200EF3B57 /* RecipeListViewModel.swift in Sources */,
 				84052D332CB984A700EF3B57 /* CardView.swift in Sources */,
 				84052D0E2CB968A300EF3B57 /* HTTPClient.swift in Sources */,

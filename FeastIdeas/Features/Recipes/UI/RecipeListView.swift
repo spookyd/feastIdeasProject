@@ -12,15 +12,21 @@ struct RecipeListView: View {
     @State private var isShowingActionSheet = false
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.recipes) { recipe in
-                        CardView {
-                            RecipeView(recipe: recipe)
+            ZStack {
+                if viewModel.recipes.isEmpty {
+                    NoRecipesView()
+                } else {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(viewModel.recipes) { recipe in
+                                CardView {
+                                    RecipeView(recipe: recipe)
+                                }
+                            }
                         }
+                        .padding()
                     }
                 }
-                .padding()
             }
             .overlay {
                 if viewModel.isLoading {

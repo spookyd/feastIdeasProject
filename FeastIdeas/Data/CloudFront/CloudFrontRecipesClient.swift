@@ -8,13 +8,14 @@
 import Foundation
 
 public struct CloudFrontRecipesClient: RecipesRepository {
+
     private let network: HTTPClient
     public init(network: HTTPClient) {
         self.network = network
     }
 
     public func fetchAllRecipes() async throws -> [Recipe] {
-        let response: CloudFrontRecipeResponse = try await network.get(path: "/recipes.json")
+        let response: CloudFrontRecipeResponse = try await network.get(path: "/recipes-empty.json")
         return response.recipes.map {
             .init(
                 id: $0.uuid,
