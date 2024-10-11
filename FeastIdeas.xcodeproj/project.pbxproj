@@ -29,6 +29,7 @@
 		84052D3E2CB9903D00EF3B57 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84052D3D2CB9903D00EF3B57 /* Kingfisher */; };
 		84052D402CB99C0400EF3B57 /* NoRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D3F2CB99C0400EF3B57 /* NoRecipesView.swift */; };
 		84052D442CB99D4300EF3B57 /* ErrorDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D432CB99D4300EF3B57 /* ErrorDialogView.swift */; };
+		84052D492CB9A2CB00EF3B57 /* RecipeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84052D482CB9A2CB00EF3B57 /* RecipeListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		84052D3A2CB987C300EF3B57 /* StubbedRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedRecipeRepository.swift; sourceTree = "<group>"; };
 		84052D3F2CB99C0400EF3B57 /* NoRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecipesView.swift; sourceTree = "<group>"; };
 		84052D432CB99D4300EF3B57 /* ErrorDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialogView.swift; sourceTree = "<group>"; };
+		84052D482CB9A2CB00EF3B57 /* RecipeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				84052D282CB97F0800EF3B57 /* TestHarness */,
 				84052D112CB9698D00EF3B57 /* Foundation */,
 				84052D242CB97DC400EF3B57 /* Data */,
+				84052D452CB9A2A500EF3B57 /* Features */,
 			);
 			path = FeastIdeasTests;
 			sourceTree = "<group>";
@@ -285,6 +288,30 @@
 			path = ErrorMessage;
 			sourceTree = "<group>";
 		};
+		84052D452CB9A2A500EF3B57 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				84052D462CB9A2AD00EF3B57 /* Recipes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		84052D462CB9A2AD00EF3B57 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				84052D472CB9A2B400EF3B57 /* UI */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		84052D472CB9A2B400EF3B57 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84052D482CB9A2CB00EF3B57 /* RecipeListViewModelTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84052D492CB9A2CB00EF3B57 /* RecipeListViewModelTests.swift in Sources */,
 				84052D2A2CB97F1F00EF3B57 /* MockURLProtocol.swift in Sources */,
 				84052D272CB97E0D00EF3B57 /* CloudFrontRecipesClientTests.swift in Sources */,
 				84052D142CB969C500EF3B57 /* HTTPClientTests.swift in Sources */,

@@ -42,6 +42,7 @@ class RecipeListViewModel: ObservableObject {
             }
             isLoading = false
         } catch {
+            // This could be optimized to automatically hide error message after x amount of time.
             errorMessage = "Failed to fetch recipes."
             isErrorDisplayed = true
             isLoading = false

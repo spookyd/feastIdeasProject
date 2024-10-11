@@ -15,7 +15,7 @@ public struct Recipe: Identifiable {
     public let source: URL?
     public let videoLink: URL?
 
-    public init(id: String, name: String, cuisine: String, photoURL: URL, source: URL?, videoLink: URL?) {
+    public init(id: String, name: String, cuisine: String, photoURL: URL, source: URL? = nil, videoLink: URL? = nil) {
         self.id = id
         self.name = name
         self.cuisine = cuisine
